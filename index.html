@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jyotsana Yadav – AI/ML Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;
+  --bg:#F2F8F3; --surface:#FFFFFF; --ink:#13291F; --muted:#5B7266; --line:#D3E3D8;
+  --blue:#1E7A52; --blue-ink:#17623F; --bar-ai:#C79A2E; --gold:#C79A2E;
+  --display:'Cinzel','Times New Roman',Georgia,serif;
+  --body:'IBM Plex Sans','Helvetica Neue',Arial,sans-serif;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+a{color:var(--blue-ink);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);margin:0;letter-spacing:.01em;line-height:1.1}
+
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+nav b{font:800 20px var(--display)}
+nav div{display:flex;gap:22px;font-size:15px}
+nav a{color:var(--ink)}
+
+.hero{padding:40px 0 72px}
+.hero h1{font-size:clamp(44px,11vw,112px);font-weight:800;line-height:1}
+.crest{display:block;width:96px;height:auto;margin-bottom:10px}
+.hero h1 span{display:block;color:var(--blue)}
+.hero p.lead{max-width:34em;margin:28px 0 0;font-size:clamp(18px,2.4vw,22px);color:var(--muted)}
+.wave{margin-top:44px;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:20px 22px 18px}
+.wave svg{display:block;width:100%;height:96px}
+.wave rect{fill:var(--bar-ai);transition:y .6s cubic-bezier(.2,.8,.2,1),height .6s cubic-bezier(.2,.8,.2,1),fill .3s}
+.wave.human rect{fill:var(--blue)}
+.wave-bar{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:12px}
+.wave-bar p{margin:0;font-size:15px;color:var(--muted);max-width:30em}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--bg)}
+.seg button{font:500 14px var(--body);border:0;background:none;color:var(--ink);padding:8px 16px;border-radius:999px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--blue);color:#fff}
+
+section{padding:64px 0;border-top:1px solid var(--line)}
+section>.wrap>h2{font-size:clamp(32px,5vw,48px);margin-bottom:36px}
+
+.proj{display:grid;grid-template-columns:1fr;gap:28px;padding:36px 0;border-bottom:1px solid var(--line)}
+.proj:last-child{border-bottom:0}
+.proj h3{font-size:clamp(26px,3.6vw,36px)}
+.proj .stack{color:var(--muted);font-size:15px;margin:8px 0 18px}
+.proj ul{margin:0;padding-left:1.1em}
+.proj li{margin:0 0 10px;max-width:40em}
+.stats{display:flex;flex-wrap:wrap;gap:12px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 20px;min-width:140px}
+.stat strong{display:block;font:800 34px var(--display);letter-spacing:-.02em;color:var(--blue-ink)}
+.stat span{font-size:14px;color:var(--muted)}
+.hl{margin:18px 0 0;padding-left:16px;border-left:3px solid var(--gold);color:var(--muted);max-width:40em}
+.hl b{color:var(--blue-ink);font-weight:500}
+.hero p.sub{margin-top:14px}
+
+.skills{display:grid;gap:0}
+.skills div{display:grid;grid-template-columns:140px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.skills dt{font:700 18px var(--display)}
+.skills dd{margin:0;color:var(--muted)}
+.skills{margin:0}
+@media(max-width:560px){.skills div{grid-template-columns:1fr;gap:4px}}
+
+.edu{display:grid;gap:12px}
+.edu div{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline}
+.edu h3{font-size:24px}
+.edu p{margin:4px 0 0;color:var(--muted)}
+.edu em{font-style:normal;font:700 22px var(--display);color:var(--blue-ink)}
+
+.int{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.int div{border-radius:20px;padding:24px}
+.int h3{font-size:22px;margin-bottom:12px}
+.int ul{list-style:none;margin:0;padding:0}
+.int li{padding:5px 0}
+.int .a{background:#E1EFE6}.int .b{background:#F8EDCF}.int .c{background:#D6EBDC}.int .d{background:#EFF1D2}
+.int-note{margin:24px 0 0;color:var(--muted);max-width:36em}
+.contact{text-align:left}
+.contact h2{font-size:clamp(34px,7vw,64px);margin-bottom:24px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 24px;border-radius:999px;font:500 16px var(--body);border:1px solid var(--ink);color:var(--ink)}
+.btn.main{background:var(--blue);border-color:var(--blue);color:#fff}
+.btn:hover{text-decoration:none;opacity:.88}
+footer{padding:28px 0 40px;color:var(--muted);font-size:14px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.wave rect{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Main">
+    <b>JY</b>
+    <div><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#interests">Interests</a><a href="#contact">Contact</a></div>
+  </nav>
+
+  <header class="hero">
+    <!-- <svg class="crest" viewBox="0 0 120 60" fill="none" stroke="#C79A2E" stroke-width="3.5" stroke-linecap="round" aria-hidden="true"><path d="M54 54C44 44 40 30 26 22C20 18 14 10 12 4"/><path d="M66 54C76 44 80 30 94 22C100 18 106 10 108 4"/><path d="M44 56Q60 46 76 56"/></svg> -->
+    <h1>Jyotsana <span>Yadav</span></h1>
+    <p class="lead">I’m a B.Tech CSE student specializing in AI/ML, with skills in MERN stack development and DSA in Java, and a growing interest in deep learning.</p>
+    <p class="lead sub">Besides coding, I love calligraphy, chess, books, movies, playing recreational sports, rollerskating, gardening, birdwatching, stargazing.</p>
+
+  </header>
+</div>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Projects</h2>
+
+    <article class="proj">
+      <div>
+        <h3>FashionVision AI</h3>
+        <p class="stack">Fashion attribute recognition tool · Python, C++, PyTorch</p>
+        <ul>
+          <li>Built a fashion cataloging system with a C++ foundation module (tensors, SVD, gradient checking, neurons, MLP, optimizers) and deep learning models in PyTorch.</li>
+          <li>Trained ResNet-18 on Fashion-MNIST and compared SGD, Momentum and Nesterov optimizers.</li>
+          <li>Trained Mask R-CNN on ModaNet for garment detection and segmentation; transfer learning raised box AP50 from 0.7% to 19.9% in a small pilot.</li>
+          <li>Added a Transformer metadata model and VAE/GAN image generators, exported ResNet-18 to ONNX, and delivered a Streamlit app for detection, classification and image generation.</li>
+        </ul>
+      </div>
+      <p class="hl">ResNet-18 reached <b>92.39% accuracy</b> and <b>92.33% macro F1</b> on Fashion-MNIST. ONNX CPU inference ran in <b>2.68 ms</b> in Python and <b>6.21 ms</b> in C++.</p>
+    </article>
+
+    <article class="proj">
+      <div>
+        <h3>Sikkim Explorer</h3>
+        <p class="stack">Full-stack travel platform · MongoDB, Express.js, React, Node.js</p>
+        <ul>
+          <li>Built a travel platform to help users explore Sikkim, with login and registration.</li>
+          <li>Developed hotel and homestay listings with photos, prices, ratings and map integration, plus bookings and reviews for logged-in users.</li>
+          <li>Added monastery information, a tourist places guide and a cultural guide covering food, festivals and dance.</li>
+          <li>Built a trip planner based on budget, group size and number of days, and an FAQ chatbox for common travel queries.</li>
+        </ul>
+      </div>
+      <p class="hl">A complete <b>MERN</b> build covering stays, monasteries, tourist places and culture in one place.</p>
+    </article>
+
+    <article class="proj">
+      <div>
+        <h3>AI vs Human Voice Detection</h3>
+        <p class="stack">Speech classifier · Python, PyTorch, FastAPI</p>
+        <ul>
+          <li>Built a deep learning system that classifies speech as AI-generated or human, using Wav2Vec 2.0 for audio representations and Librosa for preprocessing.</li>
+          <li>Developed a FastAPI backend and a React.js interface, with MongoDB for data storage; used NumPy, Pandas and scikit-learn for data handling and evaluation.</li>
+        </ul>
+      </div>
+      <p class="hl">Powered by <b>Wav2Vec 2.0</b> audio representations, with a <b>FastAPI</b> backend and a <b>React</b> front end.</p>
+    </article>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <dl class="skills">
+      <div><dt>Languages</dt><dd>C, Java, Python, JavaScript, SQL</dd></div>
+      <div><dt>AI / ML</dt><dd>Deep Learning, PyTorch, Wav2Vec 2.0, Computer Vision (ResNet, Mask R-CNN), Transformers, VAE/GAN, ONNX Runtime</dd></div>
+      <div><dt>Web</dt><dd>HTML, CSS, JavaScript, React.js, Node.js, Express.js, MongoDB (MERN), FastAPI</dd></div>
+      <div><dt>Data</dt><dd>NumPy, Pandas, Scikit-learn, Librosa</dd></div>
+      <div><dt>Core</dt><dd>Data Structures and Algorithms in Java</dd></div>
+      <div><dt>Tools</dt><dd>Git/GitHub, CMake, Streamlit</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <h2>Education</h2>
+    <div class="edu">
+      <div><div><h3>B.Tech, Computer Science (AI/ML)</h3><p>University of Petroleum and Energy Studies, Dehradun · Third year</p></div><em>Expected 2028</em></div>
+      <div><h3>Class XII</h3><em>84%</em></div>
+      <div><h3>Class X</h3><em>92.8%</em></div>
+    </div>
+  </div>
+</section>
+
+<section id="interests">
+  <div class="wrap">
+    <h2>Beyond the code</h2>
+        <p class="lead sub">Besides coding, I love....</p>
+
+    <div class="int">
+            <div class="b"><h3></h3><ul><li>Calligraphy</li><li> Journaling</li><li> Watching movies</li></ul></div>
+      <div class="a"><h3></h3><ul><li> Chess</li><li> Puzzles and cube solving</li><li>Reading books</li></ul></div>
+      <div class="c"><h3></h3><ul><li> Gardening</li><li> Birdwatching</li><li> Stargazing</li></ul></div>
+      <div class="d"><h3></h3><ul><li> Rollerskating</li><li>Playing Recreational sports</li><li> Watching matches</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="btns">
+      <a class="btn main" href="mailto:jyotsanayadav2801@gmail.com">Email</a>
+      <a class="btn" href="https://www.linkedin.com/in/jyotsana-yadav-7b5b51440" id="li">LinkedIn</a>
+      <a class="btn" href="https://github.com/jyotsanayadav" id="gh">GitHub</a>
+    </div>
+    <footer>© 2026 Jyotsana Yadav</footer>
+  </div>
+</section>
+
+<script>
+(function(){
+  var N=96, svg=document.getElementById('bars'), wave=document.getElementById('wave'),
+      cap=document.getElementById('caption'), W=600, H=96, bw=W/N, rects=[];
+  function rnd(i,s){var x=Math.sin(i*12.9898+s*78.233)*43758.5453;return x-Math.floor(x)}
+  function human(i){
+    var env=Math.sin(Math.PI*i/N)*0.55+0.25;
+    var v=env*(0.35+0.65*rnd(i,1))*(0.7+0.3*Math.sin(i*0.37+rnd(i,2)*3));
+    return Math.max(.06,Math.min(1,v));
+  }
+  function ai(i){
+    var v=0.5+0.38*Math.sin(i*0.42);
+    return Math.round(v*6)/6;
+  }
+  for(var i=0;i<N;i++){
+    var r=document.createElementNS('http://www.w3.org/2000/svg','rect');
+    r.setAttribute('x',(i*bw+bw*0.2).toFixed(2));
+    r.setAttribute('width',(bw*0.6).toFixed(2));
+    r.setAttribute('rx',1.5);
+    svg.appendChild(r);rects.push(r);
+  }
+  function draw(fn){
+    rects.forEach(function(r,i){
+      var h=Math.max(4,fn(i)*H);
+      r.setAttribute('height',h.toFixed(1));
+      r.setAttribute('y',((H-h)/2).toFixed(1));
+    });
+  }
+  draw(human);
+  var txt={human:'Human speech is uneven: pitch and volume drift from moment to moment.',
+           ai:'Synthetic speech can be too regular. My detector learns these patterns with Wav2Vec 2.0.'};
+  document.querySelectorAll('.seg button').forEach(function(b){
+    b.addEventListener('click',function(){
+      var m=b.dataset.mode;
+      document.querySelectorAll('.seg button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+      wave.classList.toggle('human',m==='human');
+      cap.textContent=txt[m];
+      draw(m==='human'?human:ai);
+    });
+  });
+})();
+</script>
+</body>
+</html>
